@@ -26,6 +26,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html:lang(zh-CN) body {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html:lang(zh-TW) body {
+  font-family: "PingFang TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html:lang(ja) body {
+  font-family: "Hiragino Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html:lang(ko) body {
+  font-family: "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 

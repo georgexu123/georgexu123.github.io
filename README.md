@@ -1,6 +1,6 @@
-# Nature Sound Box site
+# Nature’s Hush site
 
-Public landing, privacy, and support pages for Nature Sound Box.
+Public landing, privacy, and support pages for Nature’s Hush.
 
 - Home: `https://georgexu123.github.io/`
 - Privacy: `https://georgexu123.github.io/privacy.html`

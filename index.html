@@ -1,55 +1,69 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b3b3d">
-  <meta name="description" content="听野是一款专注于离线聆听的 iOS 自然环境声音应用。72 段自然声景，无广告、无订阅。">
-  <meta property="og:title" content="听野 · Nature’s Hush">
-  <meta property="og:description" content="打开就听一段自然。72 段离线声景，无广告、无订阅。">
+  <meta name="description" content="Nature’s Hush is an offline iOS nature-sound app with 72 soundscapes, no ads, and no subscription.">
+  <meta property="og:title" content="Nature’s Hush · Offline nature sounds">
+  <meta property="og:description" content="Open the app and hear a moment of nature. 72 offline soundscapes, with no ads or subscription.">
   <meta property="og:image" content="https://georgexu123.github.io/assets/app-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://georgexu123.github.io/">
-  <title>听野 · Nature’s Hush</title>
+  <title>Nature’s Hush · Offline nature sounds</title>
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
-    <a class="brand" href="/" aria-label="听野首页">
+    <a class="brand" href="/" aria-label="Nature’s Hush home" data-i18n-aria="common.brandHome">
       <img src="assets/app-icon.png" alt="" width="42" height="42">
-      <span>听野</span>
+      <span data-i18n="common.brand">Nature’s Hush</span>
     </a>
-    <nav aria-label="主要导航">
-      <a href="#features">功能</a>
-      <a href="privacy.html">隐私</a>
-      <a href="support.html">支持</a>
+    <nav aria-label="Main navigation" data-i18n-aria="common.mainNavigation">
+      <a href="#features" data-i18n="common.features">Features</a>
+      <a href="privacy.html" data-i18n="common.privacy">Privacy</a>
+      <a href="sources.html" data-i18n="common.soundSources">Sound Sources</a>
+      <a href="support.html" data-i18n="common.support">Support</a>
     </nav>
+    <label class="compact-language-picker">
+      <span class="visually-hidden" data-i18n="common.language">Reading language</span>
+      <select id="language" aria-label="Reading language" data-i18n-aria="common.language">
+        <option value="zh-CN">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="ru">Русский</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+      </select>
+    </label>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">NATURE’S HUSH · iOS</p>
-        <h1>打开，就听见<br><span>一段自然。</span></h1>
-        <p class="hero-lead">雨声、海浪、森林、夜晚与动物环境声，完整收进一只离线声音盒。没有信息流，也没有需要经营的账号。</p>
+        <h1 data-i18n-html="home.heroTitle">Open the app.<br><span>Step into nature.</span></h1>
+        <p class="hero-lead" data-i18n="home.heroLead">Rain, waves, forests, night, and wildlife—gathered in one offline sound box, without a feed or an account to maintain.</p>
         <div class="hero-actions">
-          <span class="store-button" aria-label="即将登陆 App Store">即将登陆 App Store</span>
-          <a class="text-link" href="#soundscapes">先看看里面有什么 <span aria-hidden="true">↓</span></a>
+          <span class="store-button" aria-label="Coming soon to the App Store" data-i18n="home.storeSoon" data-i18n-aria="home.storeSoon">Coming soon to the App Store</span>
+          <a class="text-link" href="#soundscapes"><span data-i18n="home.preview">Explore what’s inside</span> <span aria-hidden="true">↓</span></a>
         </div>
-        <ul class="trust-list" aria-label="产品特点">
-          <li>72 段自然声景</li>
-          <li>全部离线可用</li>
-          <li>无广告、无订阅</li>
+        <ul class="trust-list" aria-label="Product highlights" data-i18n-aria="home.productFeatures">
+          <li data-i18n="home.trustSounds">72 nature soundscapes</li>
+          <li data-i18n="home.trustOffline">Works offline</li>
+          <li data-i18n="home.trustNoAds">No ads or subscription</li>
         </ul>
       </div>
-      <div class="hero-art" aria-label="湖畔日出与水面涟漪">
-        <img src="assets/app-icon.png" alt="听野应用图标">
+      <div class="hero-art" aria-label="Sunrise over a lakeside with rippling water" data-i18n-aria="home.heroArt">
+        <img src="assets/app-icon.png" alt="Nature’s Hush app icon" data-i18n-alt="home.appIcon">
         <div class="now-playing">
           <span class="pulse" aria-hidden="true"></span>
           <div>
-            <strong>正在聆听</strong>
-            <span>自然，不需要加载</span>
+            <strong data-i18n="home.nowPlaying">Now playing</strong>
+            <span data-i18n="home.noLoading">Nature, without waiting</span>
           </div>
         </div>
       </div>
@@ -58,8 +72,8 @@
     <section class="manifesto" aria-labelledby="manifesto-title">
       <p class="section-number">01</p>
       <div>
-        <h2 id="manifesto-title">声音应用应该让人安静下来，<br>而不是继续占用注意力。</h2>
-        <p>听野只做一件事：让你在阅读、工作、休息或睡前，快速进入一段连续的自然环境。打开应用，选择声音，然后把手机放到一边。</p>
+        <h2 id="manifesto-title" data-i18n-html="home.manifestoTitle">A sound app should quiet your mind,<br>not compete for your attention.</h2>
+        <p data-i18n="home.manifestoBody">Nature’s Hush does one thing: it helps you settle into a continuous natural environment while reading, working, resting, or winding down. Open the app, choose a sound, and put your phone aside.</p>
       </div>
     </section>
 
@@ -67,22 +81,22 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">SOUNDSCAPES</p>
-          <h2 id="soundscapes-title">从雨夜到清晨森林</h2>
+          <h2 id="soundscapes-title" data-i18n="home.soundscapesTitle">From rainy nights to forest mornings</h2>
         </div>
-        <p>天气、水域、森林、夜晚、海洋与动物，所有声音都可离线循环播放。</p>
+        <p data-i18n="home.soundscapesBody">Weather, water, forests, night, oceans, and wildlife—all available for seamless offline looping.</p>
       </div>
       <div class="scene-grid">
         <article class="scene-card">
-          <img src="assets/rain.jpg" alt="雨落在窗边的夜景" loading="lazy">
-          <div><span>天气</span><h3>窗边雨声</h3><p>细密雨声 · 专注白噪音</p></div>
+          <img src="assets/rain.jpg" alt="Rain falling beside a window at night" data-i18n-alt="home.rainAlt" loading="lazy">
+          <div><span data-i18n="home.rainCategory">Weather</span><h3 data-i18n="home.rainTitle">Rain on a Window</h3><p data-i18n="home.rainSubtitle">Fine rain · Focus-friendly noise</p></div>
         </article>
         <article class="scene-card">
-          <img src="assets/ocean.jpg" alt="日落时的海浪" loading="lazy">
-          <div><span>海洋</span><h3>马里布海浪</h3><p>加州海岸 · 舒缓浪声</p></div>
+          <img src="assets/ocean.jpg" alt="Ocean waves at sunset" data-i18n-alt="home.oceanAlt" loading="lazy">
+          <div><span data-i18n="home.oceanCategory">Ocean</span><h3 data-i18n="home.oceanTitle">Malibu Waves</h3><p data-i18n="home.oceanSubtitle">California coast · Calming surf</p></div>
         </article>
         <article class="scene-card">
-          <img src="assets/forest.jpg" alt="风中的竹林" loading="lazy">
-          <div><span>森林</span><h3>竹林风响</h3><p>竹叶摇曳 · 轻柔吱响</p></div>
+          <img src="assets/forest.jpg" alt="Bamboo moving in the wind" data-i18n-alt="home.forestAlt" loading="lazy">
+          <div><span data-i18n="home.forestCategory">Forest</span><h3 data-i18n="home.forestTitle">Bamboo in the Wind</h3><p data-i18n="home.forestSubtitle">Rustling leaves · Gentle creaks</p></div>
         </article>
       </div>
     </section>
@@ -91,25 +105,25 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">DESIGNED FOR CALM</p>
-          <h2 id="features-title">把复杂留在应用之外</h2>
+          <h2 id="features-title" data-i18n="home.featuresTitle">Keep the complexity outside the app</h2>
         </div>
       </div>
       <div class="feature-grid">
-        <article><span>01</span><h3>真正离线</h3><p>声音与图片随应用提供。没有网络，也能继续聆听。</p></article>
-        <article><span>02</span><h3>双声混音</h3><p>自由组合两段自然声音，分别调整音量，创造自己的声景。</p></article>
-        <article><span>03</span><h3>适合入睡</h3><p>支持后台播放、锁屏控制与睡眠定时器。</p></article>
-        <article><span>04</span><h3>买断使用</h3><p>免费试听，一次购买永久解锁。无广告，也没有订阅。</p></article>
+        <article><span>01</span><h3 data-i18n="home.offlineTitle">Truly offline</h3><p data-i18n="home.offlineBody">Audio and artwork come with the app, so listening continues without a connection.</p></article>
+        <article><span>02</span><h3 data-i18n="home.mixTitle">Two-sound mixes</h3><p data-i18n="home.mixBody">Layer any two nature sounds, balance each track, and save the combinations you love.</p></article>
+        <article><span>03</span><h3 data-i18n="home.sleepTitle">Made for winding down</h3><p data-i18n="home.sleepBody">Background audio, Lock Screen controls, and a sleep timer are built in.</p></article>
+        <article><span>04</span><h3 data-i18n="home.purchaseTitle">One-time unlock</h3><p data-i18n="home.purchaseBody">Try it free, then unlock everything permanently with one purchase. No ads or subscription.</p></article>
       </div>
     </section>
 
     <section class="privacy-callout">
       <div>
         <p class="eyebrow">PRIVACY BY DEFAULT</p>
-        <h2>不用注册，也不需要把自己交给一款声音应用。</h2>
+        <h2 data-i18n="home.privacyTitle">No account—and no need to hand yourself over to a sound app.</h2>
       </div>
       <div>
-        <p>收藏、音量与播放偏好只保存在你的设备上。当前版本不包含第三方广告、行为分析、用户画像或崩溃上报服务。</p>
-        <a class="text-link light" href="privacy.html">阅读隐私政策 <span aria-hidden="true">→</span></a>
+        <p data-i18n="home.privacyBody">Favorite sounds, saved mixes, volumes, and playback preferences stay on your device. The current version has no third-party ads, analytics, profiling, or crash reporting.</p>
+        <a class="text-link light" href="privacy.html"><span data-i18n="home.privacyLink">Read the Privacy Policy</span> <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
@@ -117,14 +131,17 @@
   <footer>
     <div>
       <img src="assets/app-icon.png" alt="" width="52" height="52">
-      <div><strong>听野</strong><span>Nature’s Hush</span></div>
+      <div><strong data-i18n="common.brand">Nature’s Hush</strong><span data-i18n="common.secondaryBrand">Offline nature sounds</span></div>
     </div>
-    <nav aria-label="页脚导航">
-      <a href="privacy.html">隐私政策</a>
-      <a href="support.html">帮助与支持</a>
-      <a href="mailto:georgexu123@163.com">联系开发者</a>
+    <nav aria-label="Footer navigation" data-i18n-aria="common.footerNavigation">
+      <a href="privacy.html" data-i18n="common.privacyPolicy">Privacy Policy</a>
+      <a href="sources.html" data-i18n="common.soundSources">Sound Sources</a>
+      <a href="support.html" data-i18n="common.helpSupport">Help & Support</a>
+      <a href="mailto:georgexu123@163.com" data-i18n="common.contactDeveloper">Contact the developer</a>
     </nav>
-    <p>© 2026 Nature’s Hush</p>
+    <p data-i18n="common.copyright">© 2026 fang xu</p>
   </footer>
+  <script src="site-localizations.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

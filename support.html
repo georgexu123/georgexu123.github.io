@@ -1,32 +1,32 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b3b3d">
-  <meta name="description" content="听野帮助与支持。查看播放、睡眠定时器和恢复购买说明，或联系开发者。">
-  <title>帮助与支持 · 听野</title>
+  <meta name="description" content="Get help with playback, saved mixes, the sleep timer, and restoring purchases in Nature’s Hush.">
+  <title>Help &amp; Support · Nature’s Hush</title>
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="support">
   <header class="site-header">
-    <a class="brand" href="/">
+    <a class="brand" href="/" aria-label="Nature’s Hush home" data-i18n-aria="common.brandHome">
       <img src="assets/app-icon.png" alt="" width="42" height="42">
-      <span>听野</span>
+      <span data-i18n="common.brand">Nature’s Hush</span>
     </a>
-    <nav aria-label="主要导航"><a href="/">首页</a><a href="privacy.html">隐私</a></nav>
+    <nav aria-label="Main navigation" data-i18n-aria="common.mainNavigation"><a href="/" data-i18n="common.home">Home</a><a href="privacy.html" data-i18n="common.privacy">Privacy</a><a href="sources.html" data-i18n="common.soundSources">Sound Sources</a></nav>
   </header>
 
   <main class="document-main">
     <header class="document-hero">
-      <p class="eyebrow">HELP &amp; SUPPORT</p>
-      <h1>需要帮助？<br>我们一起解决。</h1>
-      <p>听野无需账户，大多数问题都可以通过重新打开应用、检查系统音量或恢复购买解决。</p>
+      <p class="eyebrow" data-i18n="support.eyebrow">HELP &amp; SUPPORT</p>
+      <h1 data-i18n-html="support.heroTitle">Need a hand?<br>Let’s work it out.</h1>
+      <p data-i18n="support.heroSummary">Nature’s Hush requires no account. Find help here for playback, saved mixes, the sleep timer, and restoring purchases.</p>
     </header>
 
     <div class="language-picker">
-      <label for="language">阅读语言 / Language</label>
+      <label for="language" data-i18n="common.language">Reading language</label>
       <select id="language">
         <option value="zh-CN">简体中文</option>
         <option value="zh-TW">繁體中文</option>
@@ -45,6 +45,8 @@
       <ul>
         <li>使用首页的大播放按钮开始聆听，上下滑动可切换声景。</li>
         <li>通过“分类”按自然环境浏览；列表播放按钮会直接播放声音。</li>
+        <li>播放单轨声音时会停止双轨组合；播放双轨组合时也会停止单轨声音。</li>
+        <li>在双轨模式调好两段声音和各自音量后，轻点书签即可保存。同一组声音再次调整音量时，会自动更新已收藏的组合。</li>
         <li>在“设置 > 播放”中启动或取消睡眠定时器。</li>
         <li>播放期间支持后台音频和锁屏控制。</li>
         <li>在“设置 > 声音来源与致谢”查看作者、来源和许可。</li>
@@ -59,7 +61,7 @@
     <article class="legal-section" data-language="zh-TW">
       <h2>繁體中文</h2>
       <h3>快速協助</h3>
-      <ul><li>使用首頁的大型播放按鈕開始聆聽，上下滑動可切換聲景。</li><li>透過「類別」依自然環境瀏覽，列表播放按鈕會直接播放。</li><li>前往「設定 > 播放」啟動或取消睡眠定時器。</li><li>播放期間可使用背景音訊與鎖定畫面控制。</li><li>前往「設定 > 聲音來源與致謝」查看作者、來源與授權。</li></ul>
+      <ul><li>使用首頁的大型播放按鈕開始聆聽，上下滑動可切換聲景。</li><li>透過「類別」依自然環境瀏覽，列表播放按鈕會直接播放。</li><li>播放單軌聲音時會停止雙軌組合；播放雙軌組合時也會停止單軌聲音。</li><li>在雙軌模式調整兩段聲音與各自音量後，點一下書籤即可儲存。同一組聲音再次調整音量時，會自動更新已收藏的組合。</li><li>前往「設定 > 播放」啟動或取消睡眠定時器。</li><li>播放期間可使用背景音訊與鎖定畫面控制。</li><li>前往「設定 > 聲音來源與致謝」查看作者、來源與授權。</li></ul>
       <h3>播放中斷</h3>
       <p>請重新開啟 App、檢查 iPhone 的媒體音量，然後再次按下播放。若問題持續發生，請在郵件中附上 iPhone 型號、iOS 版本、App 版本、使用語言與聲音名稱。</p>
       <h3>回復購買</h3>
@@ -70,7 +72,7 @@
     <article class="legal-section active" data-language="en">
       <h2>English</h2>
       <h3>Quick help</h3>
-      <ul><li>Use the large Play button on Home to begin listening. Swipe vertically to switch soundscapes.</li><li>Use Categories to browse by natural environment; a row’s Play button starts the sound directly.</li><li>Open Settings &gt; Playback to start or cancel the sleep timer.</li><li>Background audio and Lock Screen controls are available while a sound is playing.</li><li>Open Settings &gt; Sound Sources &amp; Credits for creator, source, and license information.</li></ul>
+      <ul><li>Use the large Play button on Home to begin listening. Swipe vertically to switch soundscapes.</li><li>Use Categories to browse by natural environment; a row’s Play button starts the sound directly.</li><li>Starting a single sound stops a dual-track mix, and starting a dual-track mix stops single-track playback.</li><li>In Dual mode, balance two sounds and tap the bookmark to save the mix. Changing either volume updates the saved mix for that same pair automatically.</li><li>Open Settings &gt; Playback to start or cancel the sleep timer.</li><li>Background audio and Lock Screen controls are available while a sound is playing.</li><li>Open Settings &gt; Sound Sources &amp; Credits for creator, source, and license information.</li></ul>
       <h3>Playback was interrupted</h3>
       <p>Reopen the app, check your iPhone’s media volume, and press Play again. If the issue continues, include your iPhone model, iOS version, app version, selected language, and sound name in your email.</p>
       <h3>Restore a purchase</h3>
@@ -81,7 +83,7 @@
     <article class="legal-section" data-language="ja">
       <h2>日本語</h2>
       <h3>クイックヘルプ</h3>
-      <ul><li>ホームの大きな再生ボタンで再生し、上下にスワイプして自然音を切り替えます。</li><li>「カテゴリー」では環境別に音を探せます。</li><li>「設定 &gt; 再生」からスリープタイマーを開始または解除できます。</li><li>再生中はバックグラウンド再生とロック画面操作を利用できます。</li><li>「設定 &gt; 音源とクレジット」で作者、出典、ライセンスを確認できます。</li></ul>
+      <ul><li>ホームの大きな再生ボタンで再生し、上下にスワイプして自然音を切り替えます。</li><li>「カテゴリー」では環境別に音を探せます。</li><li>1つの自然音を再生すると2トラックのミックスは停止し、ミックスを再生すると1トラックの再生は停止します。</li><li>2トラックモードで2つの音と各トラックの音量を調整し、ブックマークをタップするとミックスを保存できます。同じ組み合わせの音量を変更すると、保存済みのミックスも自動で更新されます。</li><li>「設定 &gt; 再生」からスリープタイマーを開始または解除できます。</li><li>再生中はバックグラウンド再生とロック画面操作を利用できます。</li><li>「設定 &gt; 音源とクレジット」で作者、出典、ライセンスを確認できます。</li></ul>
       <h3>再生が途切れた場合</h3>
       <p>アプリを開き直し、iPhone のメディア音量を確認してからもう一度再生してください。問題が続く場合は、機種、iOS とアプリのバージョン、使用言語、音源名をお知らせください。</p>
       <h3>購入履歴を復元する</h3>
@@ -92,7 +94,7 @@
     <article class="legal-section" data-language="ko">
       <h2>한국어</h2>
       <h3>빠른 도움말</h3>
-      <ul><li>홈의 큰 재생 버튼을 누르고 위아래로 밀어 다른 자연 소리로 전환하세요.</li><li>‘카테고리’에서 자연 환경별로 소리를 찾을 수 있습니다.</li><li>‘설정 &gt; 재생’에서 수면 타이머를 시작하거나 취소하세요.</li><li>재생 중에는 백그라운드 재생과 잠금 화면 제어를 사용할 수 있습니다.</li><li>‘설정 &gt; 음원 및 크레딧’에서 제작자, 출처와 라이선스를 확인하세요.</li></ul>
+      <ul><li>홈의 큰 재생 버튼을 누르고 위아래로 밀어 다른 자연 소리로 전환하세요.</li><li>‘카테고리’에서 자연 환경별로 소리를 찾을 수 있습니다.</li><li>한 소리를 재생하면 듀얼 트랙 믹스가 멈추고, 듀얼 트랙 믹스를 재생하면 단일 트랙 재생이 멈춥니다.</li><li>듀얼 모드에서 두 소리와 각 트랙의 음량을 조절한 뒤 북마크를 탭해 믹스를 저장하세요. 같은 조합의 음량을 바꾸면 저장된 믹스가 자동으로 업데이트됩니다.</li><li>‘설정 &gt; 재생’에서 수면 타이머를 시작하거나 취소하세요.</li><li>재생 중에는 백그라운드 재생과 잠금 화면 제어를 사용할 수 있습니다.</li><li>‘설정 &gt; 음원 및 크레딧’에서 제작자, 출처와 라이선스를 확인하세요.</li></ul>
       <h3>재생이 중단된 경우</h3>
       <p>앱을 다시 열고 iPhone의 미디어 음량을 확인한 뒤 재생해 주세요. 문제가 계속되면 iPhone 모델, iOS와 앱 버전, 사용 언어와 소리 이름을 보내 주세요.</p>
       <h3>구입 복원</h3>
@@ -103,7 +105,7 @@
     <article class="legal-section" data-language="ru">
       <h2>Русский</h2>
       <h3>Быстрая помощь</h3>
-      <ul><li>Нажмите большую кнопку воспроизведения и проводите вверх или вниз для смены звука.</li><li>В категориях звуки сгруппированы по природной обстановке.</li><li>Таймер сна находится в разделе «Настройки &gt; Воспроизведение».</li><li>Во время воспроизведения доступны фоновый режим и экран блокировки.</li><li>Авторы, источники и лицензии указаны в разделе «Источники звука и авторы».</li></ul>
+      <ul><li>Нажмите большую кнопку воспроизведения и проводите вверх или вниз для смены звука.</li><li>В категориях звуки сгруппированы по природной обстановке.</li><li>При запуске одного звука микс из двух дорожек останавливается; при запуске такого микса останавливается воспроизведение одного звука.</li><li>В режиме двух дорожек настройте два звука и громкость каждой дорожки, затем нажмите значок закладки, чтобы сохранить микс. При изменении громкости той же пары сохранённый микс обновляется автоматически.</li><li>Таймер сна находится в разделе «Настройки &gt; Воспроизведение».</li><li>Во время воспроизведения доступны фоновый режим и экран блокировки.</li><li>Авторы, источники и лицензии указаны в разделе «Источники звука и авторы».</li></ul>
       <h3>Воспроизведение прервалось</h3>
       <p>Откройте приложение заново, проверьте громкость iPhone и снова нажмите кнопку воспроизведения. Если проблема сохраняется, укажите модель iPhone, версии iOS и приложения, язык и название звука.</p>
       <h3>Восстановление покупки</h3>
@@ -114,7 +116,7 @@
     <article class="legal-section" data-language="de">
       <h2>Deutsch</h2>
       <h3>Schnelle Hilfe</h3>
-      <ul><li>Starten Sie die Wiedergabe über die große Taste und wischen Sie zum Wechseln nach oben oder unten.</li><li>Unter „Kategorien“ finden Sie Klänge nach Naturumgebung.</li><li>Den Sleep-Timer finden Sie unter „Einstellungen &gt; Wiedergabe“.</li><li>Während der Wiedergabe stehen Hintergrundwiedergabe und Sperrbildschirm-Steuerung zur Verfügung.</li><li>Urheber, Quellen und Lizenzen finden Sie unter „Tonquellen und Credits“.</li></ul>
+      <ul><li>Starten Sie die Wiedergabe über die große Taste und wischen Sie zum Wechseln nach oben oder unten.</li><li>Unter „Kategorien“ finden Sie Klänge nach Naturumgebung.</li><li>Beim Start eines einzelnen Klangs wird ein Zweispur-Mix gestoppt; beim Start eines Zweispur-Mixes endet die Einzelwiedergabe.</li><li>Stimmen Sie im Zweispurmodus zwei Klänge und die Lautstärke jeder Spur ab und tippen Sie zum Speichern auf das Lesezeichen. Ändern Sie die Lautstärke derselben Kombination, wird der gespeicherte Mix automatisch aktualisiert.</li><li>Den Sleep-Timer finden Sie unter „Einstellungen &gt; Wiedergabe“.</li><li>Während der Wiedergabe stehen Hintergrundwiedergabe und Sperrbildschirm-Steuerung zur Verfügung.</li><li>Urheber, Quellen und Lizenzen finden Sie unter „Tonquellen und Credits“.</li></ul>
       <h3>Unterbrochene Wiedergabe</h3>
       <p>Öffnen Sie die App erneut, prüfen Sie die Medienlautstärke des iPhone und starten Sie die Wiedergabe. Falls das Problem bleibt, nennen Sie iPhone-Modell, iOS- und App-Version, Sprache und Klangname.</p>
       <h3>Kauf wiederherstellen</h3>
@@ -125,7 +127,7 @@
     <article class="legal-section" data-language="fr">
       <h2>Français</h2>
       <h3>Aide rapide</h3>
-      <ul><li>Utilisez le grand bouton de lecture et balayez verticalement pour changer d’ambiance.</li><li>Les catégories regroupent les sons par milieu naturel.</li><li>Le minuteur se trouve dans « Réglages &gt; Lecture ».</li><li>La lecture en arrière-plan et les commandes de l’écran verrouillé sont disponibles pendant l’écoute.</li><li>Les auteurs, sources et licences figurent dans « Sources sonores et crédits ».</li></ul>
+      <ul><li>Utilisez le grand bouton de lecture et balayez verticalement pour changer d’ambiance.</li><li>Les catégories regroupent les sons par milieu naturel.</li><li>La lecture d’un son seul arrête le mix duo ; lancer un mix duo arrête de la même façon la lecture solo.</li><li>En mode duo, réglez deux sons et le volume de chaque piste, puis touchez le signet pour sauvegarder le mix. Si vous modifiez le volume de cette même paire, le mix sauvegardé est mis à jour automatiquement.</li><li>Le minuteur se trouve dans « Paramètres &gt; Lecture ».</li><li>La lecture en arrière-plan et les commandes de l’écran verrouillé sont disponibles pendant l’écoute.</li><li>Les auteurs, sources et licences figurent dans « Sources sonores et crédits ».</li></ul>
       <h3>Lecture interrompue</h3>
       <p>Rouvrez l’app, vérifiez le volume de l’iPhone, puis relancez la lecture. Si le problème persiste, indiquez le modèle d’iPhone, les versions d’iOS et de l’app, la langue et le nom du son.</p>
       <h3>Restaurer un achat</h3>
@@ -135,10 +137,11 @@
   </main>
 
   <footer>
-    <div><img src="assets/app-icon.png" alt="" width="52" height="52"><div><strong>听野</strong><span>Nature’s Hush</span></div></div>
-    <nav><a href="/">首页</a><a href="privacy.html">隐私政策</a></nav>
-    <p>© 2026 Nature’s Hush</p>
+    <div><img src="assets/app-icon.png" alt="" width="52" height="52"><div><strong data-i18n="common.brand">Nature’s Hush</strong><span data-i18n="common.secondaryBrand">Offline nature sounds</span></div></div>
+    <nav aria-label="Footer navigation" data-i18n-aria="common.footerNavigation"><a href="/" data-i18n="common.home">Home</a><a href="privacy.html" data-i18n="common.privacyPolicy">Privacy Policy</a><a href="sources.html" data-i18n="common.soundSources">Sound Sources</a></nav>
+    <p data-i18n="common.copyright">© 2026 fang xu</p>
   </footer>
-  <script src="legal.js"></script>
+  <script src="site-localizations.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

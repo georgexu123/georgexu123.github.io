@@ -22,6 +22,12 @@ const catalog = context.window.NATURES_HUSH_I18N;
 const soundSources = context.window.NATURES_HUSH_SOUND_SOURCES;
 const expectedLocales = ["zh-CN", "zh-TW", "en", "ja", "ko", "ru", "de", "fr"];
 const pages = ["home", "support", "privacy", "sources"];
+const forbiddenMachinePhrases = [
+  "回復購買",
+  "Kennungen favorisierten",
+  "état de droit d’achat",
+  "買い切りの解除"
+];
 
 function fail(message) {
   console.error(`ERROR: ${message}`);
@@ -58,6 +64,25 @@ for (const entry of soundSources.entries) {
     }
   }
 }
+const cc0Count = soundSources.entries.filter((entry) => entry.license === "CC0").length;
+const governmentCount = soundSources.entries.filter(
+  (entry) => entry.license === "Public Domain / NPS" ||
+    entry.license === "Public Domain / NOAA"
+).length;
+const publicDomainCount = soundSources.entries.filter(
+  (entry) => entry.license.toLowerCase().startsWith("public domain") &&
+    entry.license !== "Public Domain / NPS" &&
+    entry.license !== "Public Domain / NOAA"
+).length;
+const ccByCount = soundSources.entries.filter((entry) =>
+  entry.license.toLowerCase().includes("cc by")
+).length;
+if (cc0Count !== 57 || governmentCount !== 11 || publicDomainCount !== 4 || ccByCount !== 0) {
+  fail(
+    `Unexpected public license composition: CC0=${cc0Count}, ` +
+      `U.S. Government=${governmentCount}, public domain=${publicDomainCount}, CC BY=${ccByCount}`
+  );
+}
 
 const english = catalog.locales.en;
 for (const localeName of expectedLocales) {
@@ -91,6 +116,11 @@ for (const localeName of ["en", "ru", "de", "fr"]) {
 
 for (const file of ["index.html", "support.html", "privacy.html", "sources.html"]) {
   const html = fs.readFileSync(path.join(root, file), "utf8");
+  for (const phrase of forbiddenMachinePhrases) {
+    if (html.includes(phrase)) {
+      fail(`${file} contains a known machine-translation regression: ${phrase}`);
+    }
+  }
   const paths = [
     ...html.matchAll(/data-i18n(?:-html|-aria|-alt)?="([^"]+)"/g)
   ].map((match) => match[1]);
